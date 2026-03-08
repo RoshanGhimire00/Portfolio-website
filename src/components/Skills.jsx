@@ -13,7 +13,7 @@ const skills = [
 ];
 
 const SkillNode = ({ skill, index }) => {
-    // Generate random floating animations
+
     const randomY = [
         Math.random() * -20 - 10,
         Math.random() * 20 + 10,

@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutPhoto from '../assets/photos/MyPhotos.jpg';
 
 const About = () => {
     return (
@@ -26,8 +27,12 @@ const About = () => {
                         </div>
                     </div>
                     <div className="relative h-[400px] w-full bg-neutral-50 dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 flex items-center justify-center shadow-lg dark:shadow-none">
-                        {/* Placeholder for an image or a 3D avatar */}
-                        <span className="text-neutral-400 dark:text-neutral-500 font-medium">Image / 3D Model</span>
+                        {/* Use the imported photo */}
+                        <img
+                            src={aboutPhoto}
+                            alt="About me"
+                            className="object-cover h-full w-full"
+                        />
                     </div>
                 </div>
             </div>

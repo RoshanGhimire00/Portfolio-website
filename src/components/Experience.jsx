@@ -4,23 +4,12 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
     {
-        title: "Senior Frontend Developer",
-        company: "Tech Solutions Inc.",
-        period: "2023 - Present",
-        description: "Leading the frontend team to build scalable enterprise React applications. Improved performance by 40% and mentored junior developers."
-    },
-    {
-        title: "Full Stack Developer",
-        company: "Digital Innovations",
-        period: "2021 - 2023",
-        description: "Developed and maintained full-stack internal tools using MERN stack. Integrated various third-party APIs and managed MongoDB databases."
-    },
-    {
-        title: "Junior Web Developer",
-        company: "Creative Agency",
-        period: "2019 - 2021",
-        description: "Created responsive landing pages and interactive UI components. Collaborated closely with designers to ensure pixel-perfect implementation."
+        title: "Junior Frontend Developer",
+        company: "Debugsoft P. Ltd",
+        period: "March 2025 - Present",
+        description: "Collaborating with the frontend team to develop scalable React applications. Assisted in optimizing performance and contributed to UI/UX improvements. Supported senior developers and gained hands-on experience in modern frontend workflows."
     }
+
 ];
 
 const Experience = () => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ShapesCanvas from './canvas/Shapes';
+import MyPhoto from '../assets/photos/AboutMe.jpg';
 
 const Hero = () => {
     return (
@@ -29,7 +30,7 @@ const Hero = () => {
                         {/* Actual Image */}
                         <div className="w-full h-full rounded-full overflow-hidden absolute inset-0 m-auto" style={{ width: 'calc(100% - 16px)', height: 'calc(100% - 16px)' }}>
                             <img
-                                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&h=400&q=80"
+                                src={MyPhoto}
                                 alt="Roshan - Profile"
                                 className="w-full h-full object-cover"
                             />
