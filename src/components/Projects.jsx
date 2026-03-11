@@ -4,6 +4,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import foodImage from '../assets/images/FoodAccessManagementSystem.png';
 import GroceryImage from '../assets/images/GroceryStore.png';
 import PharmacyImage from '../assets/images/Pharmacy.png';
+import WeatherImage from '../assets/images/Weather.png';
 
 const projects = [
     {
@@ -19,6 +20,36 @@ const projects = [
         tags: ['React', 'Firebase', 'Tailwind'],
     },
     {
+        title: 'Pharmacy Website',
+        description: 'This website is a simple and reliable website for the pharmacy.',
+        image: PharmacyImage,
+        tags: ['React', 'Three.js', 'Framer Motion'],
+    },
+     {
+        title: 'Weather Website',
+        description: 'This website is a simple and reliable website for the daily weather forecasting .',
+        image: WeatherImage,
+        tags: ['React', 'OpenWeather API', 'Tailwind'],
+    },
+     {
+        title: 'Expense Tracker',
+        description: 'This website is a simple and reliable website for tracking daily expenses such as daily wages, daily expenses and daily income.',
+        image: PharmacyImage,
+        tags: ['React', 'Three.js', 'Framer Motion'],
+    },
+     {
+        title: 'Pharmacy Website',
+        description: 'This website is a simple and reliable website for the pharmacy.',
+        image: PharmacyImage,
+        tags: ['React', 'Three.js', 'Framer Motion'],
+    },
+     {
+        title: 'Pharmacy Website',
+        description: 'This website is a simple and reliable website for the pharmacy.',
+        image: PharmacyImage,
+        tags: ['React', 'Three.js', 'Framer Motion'],
+    },
+     {
         title: 'Pharmacy Website',
         description: 'This website is a simple and reliable website for the pharmacy.',
         image: PharmacyImage,
