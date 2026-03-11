@@ -1,24 +1,27 @@
 import React from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import foodImage from '../assets/images/FoodAccessManagementSystem.png';
+import GroceryImage from '../assets/images/GroceryStore.png';
+import PharmacyImage from '../assets/images/Pharmacy.png';
 
 const projects = [
     {
-        title: 'E-Commerce Platform',
-        description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB.',
-        image: 'https://via.placeholder.com/600x400/111/333?text=Project+1',
+        title: 'Food Access Management System',
+        description: 'A website where the donor can donate food and the recipient can request it.',
+        image: foodImage,
         tags: ['React', 'Express', 'MongoDB'],
     },
     {
-        title: 'Task Management App',
-        description: 'A collaborative task manager with real-time updates.',
-        image: 'https://via.placeholder.com/600x400/111/444?text=Project+2',
+        title: 'Grocery Store',
+        description: 'A grocery store website where users can browse and purchase products online.',
+        image: GroceryImage,
         tags: ['React', 'Firebase', 'Tailwind'],
     },
     {
-        title: 'Portfolio Website',
-        description: 'An interactive 3D portfolio using React Three Fiber.',
-        image: 'https://via.placeholder.com/600x400/111/555?text=Project+3',
+        title: 'Pharmacy Website',
+        description: 'This website is a simple and reliable website for the pharmacy.',
+        image: PharmacyImage,
         tags: ['React', 'Three.js', 'Framer Motion'],
     },
 ];

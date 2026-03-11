@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = ({ darkMode, setDarkMode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,14 +16,37 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
-        { name: 'Experience', href: '#experience' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Certifications', href: '#certifications' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Home', href: '#home', id: 'home' },
+        { name: 'About', href: '#about', id: 'about' },
+        { name: 'Experience', href: '#experience', id: 'experience' },
+        { name: 'Skills', href: '#skills', id: 'skills' },
+        { name: 'Projects', href: '#projects', id: 'projects' },
+        { name: 'Certifications', href: '#certifications', id: 'certifications' },
+        { name: 'Contact', href: '#contact', id: 'contact' },
     ];
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -50% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        navLinks.forEach(link => {
+            const element = document.getElementById(link.id);
+            if (element) observer.observe(element);
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <nav
@@ -41,7 +65,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors text-sm uppercase tracking-widest font-medium"
+                            className={`text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors text-sm uppercase tracking-widest font-medium ${activeSection === link.id ? 'text-brand underline underline-offset-4 decoration-2' : ''}`}
                         >
                             {link.name}
                         </a>
@@ -98,7 +122,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-neutral-800 hover:text-brand dark:text-neutral-200 dark:hover:text-white text-lg font-medium tracking-wide"
+                                    className={`text-neutral-800 hover:text-brand dark:text-neutral-200 dark:hover:text-white text-lg font-medium tracking-wide ${activeSection === link.id ? 'text-brand underline underline-offset-4 decoration-2' : ''}`}
                                 >
                                     {link.name}
                                 </a>
