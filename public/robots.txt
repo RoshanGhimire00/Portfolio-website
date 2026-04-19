@@ -1,0 +1,9 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Point search engines to your sitemap
+Sitemap: https://ghimireroshan.info.np/sitemap.xml
+
+# Optional: Block search engines from crawling these non-essential paths
+Disallow: /cdn-cgi/
