@@ -45,9 +45,7 @@ const About = () => {
             </div>
           </div>
           <div
-            className="relative .h-\[400px\] {
-    height: 400px;
-} w-full bg-neutral-50 dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 flex items-center justify-center shadow-lg dark:shadow-none"
+            className="relative h-[400px] w-full bg-neutral-50 dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 flex items-center justify-center shadow-lg dark:shadow-none"
           >
             {/* Use the imported photo */}
             <img
