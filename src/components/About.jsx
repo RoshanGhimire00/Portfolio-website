@@ -9,14 +9,11 @@ const About = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6 text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed">
                         <p>
-                            I am an aspiring web developer passionate about building engaging and performant web applications.
-                            Currently learning the MERN stack and modern front-end technologies like React and Tailwind CSS, I’m focused on turning ideas into interactive projects while growing my skills step by step
-
+                            I'm Roshan Ghimire, an aspiring web developer from Nepal passionate about building engaging and performant web applications.
+                            Currently learning the MERN stack and modern front-end technologies like React and Tailwind CSS, I'm focused on turning ideas into interactive projects while growing my skills step by step.
                         </p>
                         <p>
                             My approach blends clean, structured code with thoughtful design, aiming to create projects that not only work seamlessly but also deliver an enjoyable user experience.
-
-
                         </p>
                         <div className="flex flex-wrap gap-3 mt-6">
                             {['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind', 'Three.js'].map((skill) => (
@@ -30,7 +27,7 @@ const About = () => {
                         {/* Use the imported photo */}
                         <img
                             src={aboutPhoto}
-                            alt="About me"
+                            alt="Roshan Ghimire, MERN stack developer from Nepal"
                             className="object-cover h-full w-full"
                         />
                     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import panchakumariImage from '../assets/images/PanchakumariSamaj.jpg';
 import foodImage from '../assets/images/FoodAccessManagementSystem.png';
 import GroceryImage from '../assets/images/GroceryStore.png';
 import PharmacyImage from '../assets/images/Pharmacy.png';
@@ -8,53 +9,62 @@ import WeatherImage from '../assets/images/Weather.png';
 
 const projects = [
     {
+        title: 'Panchakumari Samaj',
+        description: 'Official community website for Panchakumari Samaj, providing information and updates to the community.',
+        image: panchakumariImage,
+        tags: ['React', 'Node.js', 'Express.js', 'Tailwind CSS', 'PostgreSQL'],
+        live: 'https://panchakumarisamaj.com/',
+        github: '#',
+    },
+    {
         title: 'Food Access Management System',
         description: 'A website where the donor can donate food and the recipient can request it.',
         image: foodImage,
-        tags: ['React', 'Express', 'MongoDB'],
+        tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+        live: '#',
+        github: '#',
     },
     {
         title: 'Grocery Store',
         description: 'A grocery store website where users can browse and purchase products online.',
         image: GroceryImage,
         tags: ['React', 'Firebase', 'Tailwind'],
+        live: '#',
+        github: '#',
     },
     {
         title: 'Pharmacy Website',
         description: 'This website is a simple and reliable website for the pharmacy.',
         image: PharmacyImage,
         tags: ['React', 'Three.js', 'Framer Motion'],
+        live: '#',
+        github: '#',
     },
      {
         title: 'Weather Website',
         description: 'This website is a simple and reliable website for the daily weather forecasting .',
         image: WeatherImage,
         tags: ['React', 'OpenWeather API', 'Tailwind'],
+        live: 'https://weathers-apps-roshan.netlify.app/',
+        github: '#',
     },
      {
         title: 'Expense Tracker',
+        description: 'This website is a simple and reliable website for tracking the daily income and expenses and then forcast the company status as per the profit and loss, balance sheet.',
+        image: PharmacyImage,
+        tags: ['React', 'Three.js', 'Framer Motion'],
+        live: '#',
+        github: '#',
+    },
+     {
+        title: 'CashPilotAI',
         description: 'This website is a simple and reliable website for tracking daily expenses such as daily wages, daily expenses and daily income.',
         image: PharmacyImage,
         tags: ['React', 'Three.js', 'Framer Motion'],
+        live: '#',
+        github: '#',
     },
-     {
-        title: 'Pharmacy Website',
-        description: 'This website is a simple and reliable website for the pharmacy.',
-        image: PharmacyImage,
-        tags: ['React', 'Three.js', 'Framer Motion'],
-    },
-     {
-        title: 'Pharmacy Website',
-        description: 'This website is a simple and reliable website for the pharmacy.',
-        image: PharmacyImage,
-        tags: ['React', 'Three.js', 'Framer Motion'],
-    },
-     {
-        title: 'Pharmacy Website',
-        description: 'This website is a simple and reliable website for the pharmacy.',
-        image: PharmacyImage,
-        tags: ['React', 'Three.js', 'Framer Motion'],
-    },
+
 ];
 
 const TiltCard = ({ project }) => {
@@ -115,10 +125,10 @@ const TiltCard = ({ project }) => {
                     </div>
 
                     <div className="flex justify-between items-center border-t border-neutral-200 dark:border-neutral-800/80 pt-4 pointer-events-auto">
-                        <motion.a whileHover={{ y: -2 }} href="#" className="flex items-center text-sm font-bold text-neutral-500 hover:text-brand dark:text-neutral-400 dark:hover:text-brand transition-colors">
+                        <motion.a whileHover={{ y: -2 }} href={project.github} target="_blank" rel="noreferrer" className="flex items-center text-sm font-bold text-neutral-500 hover:text-brand dark:text-neutral-400 dark:hover:text-brand transition-colors">
                             <Github size={18} className="mr-2" /> Code
                         </motion.a>
-                        <motion.a whileHover={{ y: -2 }} href="#" className="flex items-center text-sm font-bold text-neutral-500 hover:text-brand dark:text-neutral-400 dark:hover:text-brand transition-colors">
+                        <motion.a whileHover={{ y: -2 }} href={project.live} target="_blank" rel="noreferrer" className="flex items-center text-sm font-bold text-neutral-500 hover:text-brand dark:text-neutral-400 dark:hover:text-brand transition-colors">
                             <ExternalLink size={18} className="mr-2" /> Live Demo
                         </motion.a>
                     </div>

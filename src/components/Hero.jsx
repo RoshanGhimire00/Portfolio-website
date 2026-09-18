@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FileText } from 'lucide-react';
 import ShapesCanvas from './canvas/Shapes';
 import MyPhoto from '../assets/photos/AboutMe.jpg';
 
-const Hero = () => {
+const Hero = ({ onOpenCV }) => {
     return (
         <section id="home" className="relative w-full h-screen mx-auto overflow-hidden">
             {/* 3D Canvas Background */}
@@ -62,9 +63,20 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="inline-block bg-brand text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand/90 transition-colors shadow-[0_0_20px_rgba(100,108,255,0.4)] hover:shadow-[0_0_30px_rgba(100,108,255,0.6)] text-center"
+                            id="hero-view-projects-btn"
                         >
                             View Projects
                         </motion.a>
+                        <motion.button
+                            onClick={onOpenCV}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-flex items-center justify-center gap-2 bg-white/90 dark:bg-neutral-900/80 border-2 border-brand text-brand dark:text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand/10 dark:hover:bg-brand/20 transition-all shadow-[0_0_15px_rgba(100,108,255,0.2)] hover:shadow-[0_0_25px_rgba(100,108,255,0.4)] backdrop-blur-md"
+                            id="hero-download-cv-btn"
+                        >
+                            <FileText size={18} />
+                            View CV
+                        </motion.button>
                     </motion.div>
                 </motion.div>
             </div>
